@@ -1,0 +1,516 @@
+/* style.css */
+:root {
+    --primary-color: #3a86ff;
+    --secondary-color: #8338ec;
+    --accent-color: #ff006e;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --gray-color: #6c757d;
+    --light-gray: #e9ecef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Til tanlovi */
+.language-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.lang-btn {
+    padding: 8px 12px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Hero bo'limi */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+.action-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.action-item input {
+    margin-right: 10px;
+}
+
+.action-item label {
+    font-size: 1rem;
+}
+
+.cta-button {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #e0005e;
+    transform: translateY(-2px);
+}
+
+/* Hamkorlar bo'limi */
+.partners {
+    padding: 60px 0;
+    background: var(--light-gray);
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.partner-logos img {
+    height: 40px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.partner-logos img:hover {
+    opacity: 1;
+}
+
+/* Xizmatlar bo'limi */
+.services {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    color: var(--gray-color);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* Kimlar ko'chgan bo'limi */
+.relocated {
+    padding: 80px 0;
+    background: var(--light-gray);
+    text-align: center;
+}
+
+.professions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.profession {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    font-weight: 600;
+}
+
+/* Narxlar bo'limi */
+.pricing {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.pricing-card {
+    flex: 1;
+    min-width: 350px;
+    max-width: 450px;
+    padding: 40px 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border: 2px solid var(--light-gray);
+    transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.pricing-card h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.pricing-card ul {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.pricing-card li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.pricing-card li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.choose-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.choose-btn:hover {
+    background: #2a75e6;
+}
+
+/* Platforma bo'limi */
+.platform {
+    padding: 80px 0;
+    background: var(--light-gray);
+}
+
+.platform-content {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.platform-features {
+    flex: 1;
+    min-width: 300px;
+}
+
+.feature {
+    margin-bottom: 30px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.platform-dashboard {
+    flex: 2;
+    min-width: 300px;
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-header p:first-child {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.dashboard-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+    padding: 20px;
+    background: var(--light-gray);
+    border-radius: 5px;
+}
+
+.step h4 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.progress {
+    display: inline-block;
+    padding: 5px 10px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Test va sharhlar bo'limi */
+.testimonials {
+    padding: 80px 0;
+}
+
+.test-section {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.test-tab {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.test-tab:hover {
+    background: #2a75e6;
+    transform: translateY(-2px);
+}
+
+.testimonial {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.testimonial-header {
+    margin-bottom: 20px;
+}
+
+.testimonial-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.testimonial-header p {
+    color: var(--gray-color);
+    margin-bottom: 5px;
+}
+
+.testimonial-content p {
+    margin-bottom: 15px;
+}
+
+/* FAQ bo'limi */
+.faq {
+    padding: 80px 0;
+    background: var(--light-gray);
+}
+
+.faq-items {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.faq-item h3 {
+    padding: 20px;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    margin: 0;
+}
+
+.faq-answer {
+    padding: 20px;
+}
+
+.faq-answer ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.faq-answer li {
+    margin-bottom: 5px;
+}
+
+/* Footer */
+.footer {
+    background: var(--dark-color);
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-column li:hover {
+    color: var(--primary-color);
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive dizayn */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .service-cards, .pricing-cards, .footer-content {
+        flex-direction: column;
+    }
+    
+    .platform-content {
+        flex-direction: column;
+    }
+    
+    .partner-logos {
+        justify-content: center;
+    }
+    
+    .partner-logos img {
+        margin: 10px;
+    }
+}

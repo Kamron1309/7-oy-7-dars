@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="uz" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Urelocation - Global Talent Visa</title>
+  <!-- Tailwind CDN (for quick prototyping). For production, build Tailwind with PostCSS. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Extend Tailwind theme with the project's colors
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3a86ff',
+            secondary: '#8338ec',
+            accent: '#ff006e',
+            light: '#f8f9fa',
+            dark: '#212529',
+             uxgray: "#6B7280",
+            lightgray: '#e9ecef'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Small helper to keep image responsiveness consistent */
+    img.object-contain { object-fit: contain; }
+  </style>
+</head>
+<body class="antialiased text-dark bg-white">
+  <!-- Navigation -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <img src="./rasmlar/logo.png" alt="Urelocation" class="h-10 w-auto"/>
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-uxgray">
+          <a href="#" class="hover:text-primary">Home</a>
+          <a href="#services" class="hover:text-primary">Services</a>
+          <a href="#blog" class="hover:text-primary">Blog</a>
+          <a href="#contact" class="hover:text-primary">Contact</a>
+        </nav>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <button class="hidden md:inline-block bg-accent text-white px-4 py-2 rounded-md text-sm font-semibold hover:opacity-95">Take a scoring test</button>
+
+        <!-- Mobile menu button (visual only) -->
+        <button class="md:hidden p-2 rounded-md border" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Language selector (fixed) -->
+  <div class="fixed top-5 right-5 z-50 flex bg-white rounded-md shadow px-1 overflow-hidden">
+    <button data-lang="uz" class="lang-btn px-3 py-2 text-sm font-medium bg-primary text-white">O'Z</button>
+    <button data-lang="ru" class="lang-btn px-3 py-2 text-sm font-medium text-uxgray">РУ</button>
+    <button data-lang="en" class="lang-btn px-3 py-2 text-sm font-medium text-uxgray">EN</button>
+  </div>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-primary to-secondary text-white py-24">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6" data-key="heroTitle">Barcha ko'chish ehtiyojlaringizni qondiradigan yagona platforma</h1>
+      <img src="./rasmlar/Group.png" alt="Hero illustration" class="mx-auto mb-6 max-h-56 object-contain" />
+      <p class="text-lg md:text-xl opacity-90 mb-8" data-key="heroSubtitle">Global Talent vizasini oling va Buyuk Britaniyaga ko'ching.<br class="hidden sm:inline"/> Hozir safaringizni boshlang</p>
+
+      <div class="mx-auto max-w-xl">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-4 mb-6">
+          <label class="flex items-center gap-3 text-sm">
+            <input type="checkbox" id="test" class="w-4 h-4" />
+            <span data-key="takeTest">Test topshiring</span>
+          </label>
+
+          <label class="flex items-center gap-3 text-sm">
+            <input type="checkbox" id="evaluate" class="w-4 h-4" />
+            <span data-key="evaluateChances">Imkoniyatlaringizni baholang va jamoamizdan batafsil fikr oling</span>
+          </label>
+        </div>
+
+        <button class="inline-block bg-accent hover:bg-[#e0005e] transform hover:-translate-y-0.5 transition-all text-white px-6 py-3 rounded-md font-semibold" data-key="startJourney">Safaringizni boshlang</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="bg-lightgray py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-wrap items-center justify-between gap-6">
+        <!-- Keep logos small and responsive -->
+        <img src="./rasmlar/Rectangle 1.png" alt="HSBC" class="h-10 opacity-70 hover:opacity-100 object-contain" />
+        <img src="./rasmlar/Rectangle 2.png" alt="Vodafone" class="h-10 opacity-70 hover:opacity-100 object-contain" />
+        <img src="./rasmlar/Rectangle 3.png" alt="Revolut" class="h-10 opacity-70 hover:opacity-100 object-contain" />
+        <img src="./rasmlar/Rectangle 4.png" alt="Oracle" class="h-10 opacity-70 hover:opacity-100 object-contain" />
+        <img src="./rasmlar/Rectangle 5.png" alt="Google" class="h-10 opacity-70 hover:opacity-100 object-contain" />
+        <img src="./rasmlar/Rectangle 6.png" alt="Facebook" class="h-10 opacity-70 hover:opacity-100 object-contain" />
+        <img src="./rasmlar/Rectangle 7.png" alt="J.P.Morgan" class="h-10 opacity-70 hover:opacity-100 object-contain" />
+        <img src="./rasmlar/Rectangle 24.png" alt="Click" class="h-10 opacity-70 hover:opacity-100 object-contain" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4" data-key="immigrationMadeEasy">Immigratsiya osonlashtirildi</h2>
+      <p class="text-uxgray mb-10 max-w-3xl mx-auto" data-key="serviceDescription">Urelocation siz va xalqaro xodimlaringiz uchun viza jarayonini soddalashtiradi. Biz nozik tafsilotlarni hal qilamiz, shunda siz boshqa vazifalarga e'tibor qaratishingiz mumkin.</p>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <article class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-transform transform hover:-translate-y-2">
+          <h3 class="text-xl font-semibold text-primary mb-3" data-key="fastService">Tez xizmat</h3>
+          <p class="text-sm text-uxgray mb-4" data-key="fastServiceDesc">Biz sizning vaqt jadvalingiz bo'yicha ishlayotganimizda, viza so'rovlarini tekshiramiz, yaratamiz, topshiramiz va maqullaymiz.</p>
+          <img src="./rasmlar/Rectangle 10.png" alt="Fast" class="w-full h-40 object-contain"/>
+        </article>
+
+        <article class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-transform transform hover:-translate-y-2">
+          <h3 class="text-xl font-semibold text-primary mb-3" data-key="fullControl">To'liq nazorat va ko'rinish</h3>
+          <p class="text-sm text-uxgray mb-4" data-key="fullControlDesc">Bizning intuitiv platformamiz siz va xodimingizni immigratsiya jarayonining har bir bosqichida boshqaradi, yo'l davomida holat yangilanishlarini bir ko'rinishda ko'rsatadi.</p>
+          <img src="./rasmlar/Rectangle 11.png" alt="Control" class="w-full h-40 object-contain"/>
+        </article>
+
+        <article class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-transform transform hover:-translate-y-2">
+          <h3 class="text-xl font-semibold text-primary mb-3" data-key="personalManagers">Shaxsiy mas'ul menejerlar</h3>
+          <p class="text-sm text-uxgray mb-4" data-key="personalManagersDesc">Bizning global mobil mutaxassislar jamoasi bilan ishonch bilan ishlang. Ular barcha savollaringizga javob berish uchun tayyor.</p>
+          <img src="./rasmlar/Rectangle 12.png" alt="Managers" class="w-full h-40 object-contain"/>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who relocated -->
+  <section class="bg-lightgray py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4" data-key="whoRelocated">Immigram yordami bilan kimlar ko'chdi?</h2>
+      <p class="text-uxgray mb-8 max-w-3xl mx-auto" data-key="youCanBeNext">Siz keyingi bo'lishingiz mumkin! Ko'chish safaringizni hozir boshlang</p>
+
+      <div class="flex flex-wrap justify-center gap-6 items-center">
+        <img src="./rasmlar/Rectangle 13.png" alt="Prof 1" class="h-24 object-contain"/>
+        <img src="./rasmlar/Rectangle 14.png" alt="Prof 2" class="h-24 object-contain"/>
+        <img src="./rasmlar/Rectangle 15.png" alt="Prof 3" class="h-24 object-contain"/>
+        <img src="./rasmlar/Rectangle 16.png" alt="Prof 4" class="h-24 object-contain"/>
+        <img src="./rasmlar/Rectangle 23.png" alt="Prof 5" class="h-24 object-contain"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4" data-key="howToStart">Global Talent Visa ishimi qanday boshlashim mumkin?</h2>
+      <p class="text-uxgray mb-10 max-w-3xl mx-auto" data-key="pricingDescription">Platformamizda afzal ko'rgan yo'lingizni tanlang:</p>
+
+      <div class="grid gap-6 md:grid-cols-2 justify-center items-stretch">
+        <div class="bg-white rounded-xl p-8 shadow-md border border-lightgray hover:border-primary transition-transform transform hover:-translate-y-2">
+          <h3 class="text-4xl font-extrabold text-primary mb-6">£5,500</h3>
+          <ul class="text-left mb-6 space-y-3 text-sm text-uxgray">
+            <li data-key="paymentOption1">2 ta to'lovda - shartnoma imzolashda oldindan to'lov va Endowment olingandan keyin to'lov</li>
+            <li data-key="paymentOption2">6 ta teng to'lovda - birinchisi shartnoma imzolashda to'lanadi va qolgan to'rt to'lov bir oy oralig'ida to'lanadi</li>
+            <li data-key="refundPolicy">*Endowment olishning ikkinchi muvaffaqiyatsiz urinishi holatida, siz to'lov miqdorining 70% qaytarib olish huquqiga egasiz.</li>
+            <li data-key="discount5">**Butun miqdorni to'lang va qo'shimcha 5% chegirma oling.</li>
+          </ul>
+          <button class="choose-btn bg-primary text-white px-6 py-2 rounded-md font-semibold">Tanlash</button>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-md border border-lightgray hover:border-primary transition-transform transform hover:-translate-y-2">
+          <h3 class="text-4xl font-extrabold text-primary mb-6">£4,000</h3>
+          <ul class="text-left mb-6 space-y-3 text-sm text-uxgray">
+            <li data-key="paymentOption1">2 ta to'lovda - shartnoma imzolashda oldindan to'lov va Endowment olingandan keyin to'lov</li>
+            <li data-key="paymentOption2">6 ta teng to'lovda - birinchisi shartnoma imzolashda to'lanadi va qolgan to'rt to'lov bir oy oralig'ida to'lanadi</li>
+            <li data-key="discount10">*Butun miqdorni to'lang va qo'shimcha 10% chegirma oling.</li>
+            <li data-key="nonRefundable">*Qaytarib bo'lmaydigan tarif</li>
+          </ul>
+          <button class="choose-btn bg-primary text-white px-6 py-2 rounded-md font-semibold">Tanlash</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform -->
+  <section class="bg-lightgray py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-6" data-key="whatIsPlatform">URElocation Platformasi nima?</h2>
+
+      <div class="flex flex-col md:flex-row gap-8 md:items-start">
+        <div class="md:flex-1">
+          <div class="mb-6">
+            <h3 class="text-xl font-semibold text-primary mb-2" data-key="fullTransparency">To'liq shaffoflik</h3>
+            <p class="text-uxgray" data-key="dashboardDesc">Butun jarayonni ko'rib chiqadigan jonli boshqaruv paneli</p>
+          </div>
+
+          <div class="flex gap-3 flex-wrap">
+            <button class="px-3 py-2 border rounded">clear statuses</button>
+            <button class="px-3 py-2 border rounded">timeline</button>
+            <button class="px-3 py-2 border rounded">steps</button>
+            <button class="px-3 py-2 border rounded">progress</button>
+          </div>
+        </div>
+
+        <div class="md:flex-2 bg-white rounded-lg p-6 shadow-sm">
+          <img src="./rasmlar/Group 1156.png" alt="Dashboard" class="w-full h-60 object-contain" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold" data-key="notSureEligible">Haqiqatan ham mos kelasizmi deb ishonmayapsizmi?</h2>
+        <p class="text-uxgray mb-4" data-key="calculateChances">Imkoniyatlaringizni hisoblang va jamoamizdan batafsil fikr oling</p>
+        <div class="inline-block bg-primary text-white px-4 py-2 rounded-md cursor-pointer" data-key="takeTest">Test topshirish</div>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-xl font-bold text-center mb-6" data-key="testimonials">Sharhlar</h3>
+
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="./rasmlar/Ellipse 52.png" alt="avatar" class="h-12 w-12 rounded-full object-cover" />
+            <div>
+              <h4 class="font-semibold">Adriano K.</h4>
+              <div class="flex gap-2 text-xs text-uxgray mt-1">
+                <button class="px-2 py-1 border rounded">Co-Founder</button>
+                <button class="px-2 py-1 border rounded">CEO</button>
+                <button class="px-2 py-1 border rounded">O'yin dasturchisi</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-uxgray mb-3" data-key="testimonialText">Men Immigramga ukrainalik hamkasbim tavsiya qilgan. Menga eng kutilmagan nima bo'ldi? Men Immigram jamoasi Goldman Sachs va Nomura kabi kompaniyalarda ishlagan AI va algoritmlarning burilishlarini qanday tushunishlariga hayron qoldim.</p>
+          <p class="text-uxgray text-sm" data-key="testimonialText2">Menda Data Science, Machine Learning, Statistik usullar, Optimizatsiya va Moliya bilan bog'liq 30 dan ortiq nashr etilgan jurnal maqolalari va kitob boblariga ega keng akademik tadqiqot tajribam bor. Men Immigram jamoasi mening tadqiqot maqolalarimni ular mening ilmiy faoliyatimni tushunganligini aytishim mumkin bo'lgan tarzda tuzishga muvaffaq bo'lishlariga hayron qoldim, shunchaki bibliografiya emas. Oxir-oqibat, men Immigramga viza olish uchun keldim va vizani oldim.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-lightgray py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">FAQ</h2>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+          <button class="w-full text-left px-4 py-3 bg-primary text-white flex items-center justify-between faq-toggle" aria-expanded="false">
+            <span data-key="whatDoesVisaOffer">Global Talent Visa nima taklif qiladi?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="px-4 py-3 faq-content hidden">
+            <p class="text-uxgray mb-2" data-key="visaRequirements">Raqamli texnologiyalar sohasidagi Global Talent nomzodlari quyidagilarni o'z ichiga olgan to'ldirilgan Viza arizasi shaklini ilova qilishlari kerak:</p>
+            <ul class="list-disc pl-5 text-uxgray">
+              <li data-key="personalStatement">Shaxsiy bayonot;</li>
+              <li data-key="cv">Tajribangizni, tegishli sohaga qo'shgan hissangizni, nashrlaringizni va boshqalarni o'z ichiga olgan CV;</li>
+              <li data-key="recommendations">Texnologiya sanoatining tan olingan yetakchilaridan kamida 3 ta tavsiya xati;</li>
+              <li data-key="evidence">Tegishli malaka mezonlari bo'yicha 10 gacha dalil.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+          <button class="w-full text-left px-4 py-3 bg-primary text-white flex items-center justify-between faq-toggle" aria-expanded="false">
+            <span data-key="whoCanApply">Kim Global Talent Viza uchun ariza berishi mumkin?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="px-4 py-3 faq-content hidden">
+            <p class="text-uxgray" data-key="whoCanApplyDesc">Texnologiya sohasida malakali mutaxassislar, tadqiqotchilar va rahbarlar Global Talent Viza uchun ariza berishlari mumkin.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+          <button class="w-full text-left px-4 py-3 bg-primary text-white flex items-center justify-between faq-toggle" aria-expanded="false">
+            <span data-key="whatDoesImmigramOffer">Immigram nima taklif qiladi?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="px-4 py-3 faq-content hidden">
+            <p class="text-uxgray" data-key="immigramOfferDesc">Immigram Global Talent Viza olish jarayonida professional yordam taklif qiladi, shu jumladan hujjatlarni tayyorlash, ariza topshirish va maslahat xizmatlari.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div>
+          <img src="./rasmlar/logo (1).png" alt="logo" class="h-10 object-contain" />
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-3" data-key="mainMenu">Asosiy menyu</h4>
+          <ul class="text-sm">
+            <li class="mb-2 cursor-pointer">Bosh sahifa</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-3" data-key="address">Manzil</h4>
+          <p class="text-sm">130-134 Local RIA Cheese, London SW1O 9AL</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-3" data-key="followUs">Bizni kuzatib boring</h4>
+          <div class="flex gap-3 items-center">
+            <img src="./rasmlar/image 3 (Traced).png" alt="" class="h-6 object-contain"/>
+            <img src="./rasmlar/image 4 (Traced).png" alt="" class="h-6 object-contain"/>
+            <img src="./rasmlar/image 5 (Traced).png" alt="" class="h-6 object-contain"/>
+            <img src="./rasmlar/image 6 (Traced).png" alt="" class="h-6 object-contain"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Minimal JS for interactions -->
+  <script src="./app.js">
+    // // Language selector active state
+    // document.querySelectorAll('.lang-btn').forEach(btn => {
+    //   btn.addEventListener('click', () => {
+    //     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('bg-primary','text-white'))
+    //     btn.classList.add('bg-primary','text-white')
+    //     // TODO: hook into i18n system
+    //   })
+    // })
+
+    // // FAQ toggle
+    // document.querySelectorAll('.faq-toggle').forEach(btn => {
+    //   btn.addEventListener('click', () => {
+    //     const content = btn.nextElementSibling;
+    //     const expanded = btn.getAttribute('aria-expanded') === 'true';
+    //     btn.setAttribute('aria-expanded', !expanded);
+    //     btn.querySelector('.faq-icon').textContent = expanded ? '+' : '-';
+    //     content.classList.toggle('hidden');
+    //   })
+    // })
+  </script>
+</body>
+</html>
