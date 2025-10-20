@@ -1,0 +1,64 @@
+.urelocation-footer {
+  background: #001529;
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.urelocation-footer h3 {
+  color: #1890ff;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.urelocation-footer h4 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.urelocation-footer p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu li {
+  margin-bottom: 10px;
+}
+
+.footer-menu a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-menu a:hover {
+  color: #1890ff;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-link {
+  color: #1890ff;
+  text-decoration: none;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.footer-bottom {
+  border-top: 1px solid #304156;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #999;
+  margin: 0;
+}

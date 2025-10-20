@@ -1,0 +1,55 @@
+.process-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.process-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.welcome-message {
+  background: #f0f7ff;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  border-left: 4px solid #1890ff;
+}
+
+.welcome-message h3 {
+  color: #1890ff;
+  margin-bottom: 10px;
+}
+
+.process-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  height: 100%;
+}
+
+.process-card h4 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.process-progress {
+  margin: 15px 0;
+}
+
+.process-progress .ant-progress-bg {
+  background: #1890ff;
+}
+
+.time-estimate {
+  background: #f0f7ff;
+  color: #1890ff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}

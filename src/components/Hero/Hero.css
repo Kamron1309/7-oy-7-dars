@@ -1,0 +1,69 @@
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 150px 0 100px;
+  margin-top: 70px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-button {
+  height: 50px;
+  padding: 0 40px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.scoring-card {
+  margin-top: 40px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.scoring-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.scoring-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.scoring-item span {
+  color: #333;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-section {
+    padding: 120px 0 80px;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+}
